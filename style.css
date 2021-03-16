@@ -57,7 +57,7 @@ h1, h2, h3, p{
 	flex-direction: column;
 }
 
-.burger i{
+.burger{
 	display: none;
 }
 
@@ -299,7 +299,7 @@ h1, h2, h3, p{
 		margin-right: 20px;
 	}
 
-	.burger i{
+	.burger{
 		display: inline-block;
 	}
 
