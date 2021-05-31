@@ -78,13 +78,13 @@ body{
 	animation: opacity 3s;
 }
 
-span{
+h1 span{
 	display: inline-block;
 	position: relative; 
 	overflow-x: hidden;
 } 
 
-span::before{
+h1 span::before{
 	content: "";
 	position: absolute;
 	left: 0;
@@ -92,6 +92,47 @@ span::before{
 	height: 100%;
 	width: 100%;
 	animation: textIn 3s;
+}
+
+.social-media{
+	position: absolute;
+	bottom: 20px;
+	z-index: 99;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.rounded{
+	margin-left: 20px;
+}
+
+.rounded a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	background: rgba(155, 155, 155, .1);
+	padding: 5px 15px;
+	border-radius: 20px 0 20px 0;
+	transition: all 2s;
+	box-shadow: 8px 8px 15px rgba(0, 0, 0, .5);
+}
+
+.rounded a:hover{
+	backdrop-filter: blur(10px);
+	box-shadow: 8px 8px 15px rgba(0, 0, 0, 1);
+}
+
+.fa{
+	color: #fafafa;
+	margin-right: 8px;
+}
+
+.rounded h1{
+	font-size: 16px;
+	color: #fafafa;
 }
 
 
@@ -163,13 +204,15 @@ span::before{
 	}
 
 	.content h1{
-		font-size: 30px;
+		font-size: 25px;
 	}
 
 	.left,.right{margin: 0;}
 
 	.left{
 		width: 85vw;
+		margin-top: -50px;
 	}
+
 }
 
