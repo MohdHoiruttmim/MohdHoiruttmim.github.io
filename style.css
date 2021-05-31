@@ -162,10 +162,14 @@ span::before{
 		width: 50vw;
 	}
 
+	.content h1{
+		font-size: 30px;
+	}
+
 	.left,.right{margin: 0;}
 
 	.left{
-		width: 80vw;
+		width: 85vw;
 	}
 }
 
