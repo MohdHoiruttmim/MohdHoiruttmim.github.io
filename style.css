@@ -32,6 +32,7 @@ body{
 	width: 100vw;
 	z-index: 99;
 	box-sizing: border-box;
+	transition: all .6s;
 }
 
 .title{
@@ -281,24 +282,18 @@ h1 span::before{
 		top: 0;
 		left: 0;
 		z-index: 99;
-		transition: all 3s;
+		transition: all 1s;
 		backdrop-filter: blur(20px);
 	}
 
 	.title i{
 		color: #fafafa;
 		margin-left: 20px;
-		transition: all 3s;
+		transition: all 1s;
 	}
 
 	.title.active{
-		background: rgba(0, 0, 0, 0);
-		color:rgba(0, 0, 0, 0);
-		backdrop-filter: blur(0);
-	}
-
-	.title.active i{
-		opacity: .4;
+		opacity: 0;
 	}
 
 	#navbar{
@@ -307,7 +302,7 @@ h1 span::before{
 		margin-top: 45px;
 	}
 	
-	#navbar.active{
+	#navbar.resActive{
 		transform: translateX(0);
 	}
 
@@ -399,6 +394,6 @@ h1 span::before{
 		transition: all .5s;
 	}
 	
-
+	
 }
 
