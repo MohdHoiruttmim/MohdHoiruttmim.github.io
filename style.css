@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500&display=swap');
 
+
 *{
 	padding: 0;
 	margin: 0;
@@ -110,7 +111,7 @@ svg{
 	width: 30vw;
 	animation: toLeft 3s;
 }
-
+/* konten kanan dan kiri */
 .left,.right{margin: 0 2vw;}
 
 .left{
@@ -147,10 +148,11 @@ h1 span::before{
 	animation: textIn 3s;
 }
 
+/* bagian sosial media */
 .social-media{
 	position: absolute;
 	bottom: 20px;
-	z-index: 99;
+	z-index: 90;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -192,11 +194,12 @@ h1 span::before{
 	display: none;
 }
 
+/* qoutes */
 .qoute{
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	z-index: 99;
+	z-index: 90;
 	bottom: 100px;
 	color: #fafafa;
 	font-style: italic;
@@ -263,11 +266,11 @@ h1 span::before{
 
 
 @media (max-width: 670px) {
+	/* responsive navigasi */
 	.title{
-		background: #1b1b1b;
+		background: rgba(0, 0, 0, .5);
 		width: 100vw;
 		text-align: center;
-		color: #fafafa;
 		padding: 10px 0;
 		font-family: 'Poppins', sans-serif;
 		font-weight: 500;
@@ -278,28 +281,30 @@ h1 span::before{
 		top: 0;
 		left: 0;
 		z-index: 99;
+		transition: all 3s;
+		backdrop-filter: blur(20px);
 	}
 
-	.title h1{
-		margin-left: -20px;
-	}
-
-	.hidden{
-		color: transparent;
-	}
-	
-	.line{
-		height: 5px;
-		width: 25px;
-		background: #fafafa;
-		margin: 5px 0;
+	.title i{
+		color: #fafafa;
 		margin-left: 20px;
+		transition: all 3s;
+	}
+
+	.title.active{
+		background: rgba(0, 0, 0, 0);
+		color:rgba(0, 0, 0, 0);
+		backdrop-filter: blur(0);
+	}
+
+	.title.active i{
+		opacity: .4;
 	}
 
 	#navbar{
 		transform: translateX(-100%);
 		transition: all .5s;
-		margin-top: 55px;
+		margin-top: 45px;
 	}
 	
 	#navbar.active{
@@ -310,6 +315,13 @@ h1 span::before{
 		flex-direction: column;
 	}
 
+	#navbar a{
+		width: 100vw;
+		padding: 20px 0 20px 35px;
+	}
+
+
+	/* bagian konten kanan dan kiri */
 	.content{
 		flex-direction: column-reverse;
 		justify-content: space-evenly;
@@ -332,6 +344,7 @@ h1 span::before{
 		margin-top: -50px;
 	}
 
+	/* bagian sosial media */
 	.social-media{
 		width: 200px;
 		right: 30px;

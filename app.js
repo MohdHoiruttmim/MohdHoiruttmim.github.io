@@ -13,3 +13,7 @@ nav.addEventListener('click', () =>{
     navItem.classList.toggle('active');
 })
 
+// membuat background menjadi transparan pada saat melakukan scroll
+window.addEventListener('scroll', () => {
+    nav.classList.toggle("active", window.scrollY > 150);
+})
