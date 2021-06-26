@@ -10,6 +10,7 @@ body{
 	width: 100vw;
 	overflow-x: hidden;
 	background-color: var(--black);
+	scroll-behavior: smooth;
 }
 
 :root{
@@ -284,6 +285,43 @@ h1 span::before{
 	}
 }
 
+/* bagian projects */
+#projects {
+	width: 100vw;
+	height: 100vh;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fafafa;
+}
+
+#projects h1{
+	font-family: "Poppins", sans-serif;
+}
+
+.maintenace{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.maintenace i{
+	display: block;
+	font-size: 36px;
+	animation: spin 1s infinite;
+	margin-top: 20px;
+}
+
+@keyframes spin {
+	to{
+		transform: rotate(360deg);
+	}
+	from{
+		transform: rotate(0deg);
+	}
+}
 
 
 
@@ -301,6 +339,7 @@ h1 span::before{
 
 
 
+/* pada saat lebar layar max 670px maka code dibawah akan berjalan  */
 @media (max-width: 670px) {
 	/* responsive navigasi */
 	.title{
@@ -329,6 +368,10 @@ h1 span::before{
 
 	.title.active{
 		opacity: 0;
+	}
+
+	.title.active i{
+		visibility: hidden;
 	}
 
 	#navbar{
