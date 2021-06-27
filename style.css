@@ -4,13 +4,13 @@
 *{
 	padding: 0;
 	margin: 0;
+	scroll-behavior: smooth;
 }
 
 body{
 	width: 100vw;
 	overflow-x: hidden;
-	background-color: var(--black);
-	scroll-behavior: smooth;
+	background-color: black;
 }
 
 :root{
@@ -54,8 +54,8 @@ body{
 
 #navbar a:hover{
 	padding: 15px 15px;
-	background: rgba(155, 155, 155, 1);
-	border-bottom: 5px solid var(--red);
+	background: var(--black);
+	border-bottom: 5px solid #fafafa;
 	box-sizing: border-box;
 }
 
@@ -150,52 +150,6 @@ h1 span::before{
 	animation: textIn 3s;
 }
 
-/* bagian sosial media */
-.social-media{
-	position: absolute;
-	bottom: 20px;
-	z-index: 90;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-}
-
-.rounded{
-	margin: 0 10px;
-}
-
-.rounded a{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-decoration: none;
-	background: rgba(155, 155, 155, .1);
-	padding: 5px 15px;
-	border-radius: 20px 0 20px 0;
-	transition: all .5s;
-	box-shadow: 8px 8px 15px rgba(0, 0, 0, .5);
-}
-
-.rounded a:hover{
-	backdrop-filter: blur(10px);
-	box-shadow: 8px 8px 15px rgba(0, 0, 0, 1);
-}
-
-.fa{
-	color: #fafafa;
-	margin-right: 8px;
-}
-
-.rounded h1{
-	font-size: 16px;
-	color: #fafafa;
-}
-
-.rounded:nth-child(3){
-	display: none;
-}
-
 /* qoutes */
 .qoute{
 	position: absolute;
@@ -230,7 +184,7 @@ h1 span::before{
 }
 
 .scrollDown i{
-	display: inline-block;
+	display: none;
 	color: #fafafa;
 }
 
@@ -288,42 +242,105 @@ h1 span::before{
 /* bagian projects */
 #projects {
 	width: 100vw;
-	height: 100vh;
 	background: #000;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #fafafa;
-}
-
-#projects h1{
-	font-family: "Poppins", sans-serif;
-}
-
-.maintenace{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	color: #fafafa;
+	padding-top: 50px;
 }
 
-.maintenace i{
-	display: block;
-	font-size: 36px;
-	animation: spin 1s infinite;
-	margin-top: 20px;
+#projects h1{
+	font-family: "Poppins", sans-serif;
+	text-transform: uppercase;
 }
 
-@keyframes spin {
+.cards {
+	width: 95vw;
+	height: 80vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: -50px;
+}
+
+.card{
+	background: var(--black);
+	height: 200px;
+	width: 300px;
+	position: relative;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.card a{
+	text-decoration: none;
+	font-family: "Montserrat", sans-serif;
+	color: #fafafa;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: var(--light-black);
+	width: 100%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card a i{
+	animation: goRight 1s infinite alternate-reverse;
+}
+
+@keyframes goRight{
 	to{
-		transform: rotate(360deg);
+		transform: translateX(0);
 	}
 	from{
-		transform: rotate(0deg);
+		transform: translateX(-20px);
 	}
 }
 
+/* bagian about */
+#about{
+	width: 100vw;
+	height: 40vh;
+	background-color: var(--black);
+	font-family: "poppins", sans-serif;
+	color: #fafafa;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 0 50px;
+}
 
+.thanks{
+	width: 50vw;
+}
+
+.thanks h1{
+	margin-bottom: 20px;
+}
+
+.social-media{
+	width: 50vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.icon a{
+	text-decoration: none;
+	color: #fafafa;
+	margin: 10px 10px;
+}
 
 
 
@@ -393,6 +410,10 @@ h1 span::before{
 		padding: 20px 0 20px 35px;
 	}
 
+	/* menampilkan scroll down pada smartphone */
+	.scrollDown i{
+		display: inline-block;
+	}
 
 	/* bagian konten kanan dan kiri */
 	.content{
@@ -417,60 +438,32 @@ h1 span::before{
 		margin-top: -50px;
 	}
 
-	/* bagian sosial media */
+	/* bagian projek galeri */
+	.cards{
+		margin: 50px 0;
+	}
+
+	.card{
+		margin-bottom: 20px;
+	}
+
+	/* bagian about */
+	#about{
+		margin-top: 350px;
+		flex-direction: column;
+		height: auto;
+		padding-top: 20px;
+	}
+
+	.thanks{
+		width: 80vw;
+		margin-bottom: 20px;
+	}
+
 	.social-media{
-		width: 	100vw;
-		bottom: 50px;
+		width: 100vw;
+		background: var(--light-black);
 	}
-
-	.rounded h1:NOT(:nth-child(1)){
-		display: none;
-	}
-
-	.rounded a{
-		text-align: center;
-		padding: 0;
-		width: 50px;
-		height: 50px;
-		line-height: 50px;
-		bottom: 20px;
-		right: 20px;
-		background-color: rgba(255, 255, 255, 0);
-		backdrop-filter: blur(0);
-		box-shadow: none;
-		font-size: 16px;
-	}
-	.fa{
-		margin: 0;
-	}
-
-	.rounded a:hover{
-		background-color: rgba(155, 155, 155, .1);
-		backdrop-filter: blur(20px);
-	}
-
-	.rounded:nth-child(3){
-		display: inline-block;
-	}
-
-	.rounded h1{
-		font-size: 50px;
-	}
-
-	.rounded.active a{
-		position: relative;
-		bottom: 20px;
-		right: 20px;
-	}
-	.rounded.active h1{
-		transform: rotate(45deg);
-		transition: all .5s;
-	}
-
-	.rounded h1{
-		transition: all .5s;
-	}
-	
 	
 }
 

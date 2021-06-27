@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="flaticon/css/uicons-regular-rounded.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <section id="welcome-section">
@@ -18,8 +18,8 @@
         <div id="navbar">
             <ul>
                 <li><a href="#welcome-section">Home</a></li>
-                <li><a href="#project-tile">Portofolio</a></li>
-                <li><a href="#thanks">About</a></li>
+                <li><a href="#projects">Portofolio</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </div>
         <div class="overlay"></div>
@@ -34,20 +34,6 @@
                 <img src="img/avatar.png" alt="">
             </div>
         </div>
-        <div class="social-media">
-            <div class="rounded">
-                <a  id="profile-link" href="https://github.com/freecodecamp" target="_blank">
-                    <i class="fa fa-github fa-2x"></i>
-                    <h1>Github</h1>
-                </a>
-            </div>
-            <div class="rounded">
-                <a href="#">
-                    <i class="fa fa-instagram fa-2x"></i>
-                    <h1>Instagram</h1>
-                </a>
-            </div>
-        </div>
         <div class="qoute">
             <p>"Do your plan and reach your dream"</p>
         </div>
@@ -58,12 +44,65 @@
         </div>
     </section>
     <section id="projects">
-        <div class="maintenace">
-            <h1>Under Maintenace</h1>
-                <i class="fi-rr-spinner-alt"></i>
+        <h1>projects Galery</h1>
+        <div class="cards">
+            <div data-aos="fade-up">
+                <div class="card">
+                    <h1>Survey Form</h1>
+                    <a href="https://mohdhoiruttmim.github.io/freecodeCamp-survey-form/" target="_blank">
+                        <h4>See Project</h4>
+                        <i class="fi-rr-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="card">
+                    <h1>Product Landing Page</h1>
+                    <a href="https://mohdhoiruttmim.github.io/freecodeCamp-product-landing-page/" target="_blank">
+                        <h4>See Project</h4>
+                        <i class="fi-rr-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="card">
+                    <h1>Tribute Page Example</h1>
+                    <a href="https://mohdhoiruttmim.github.io/freecodeCamp-tribute-page/" target="_blank">
+                        <h4>See Project</h4>
+                        <i class="fi-rr-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <div class="card">
+                    <h1>Technical Documentation</h1>
+                    <a href="https://mohdhoiruttmim.github.io/freecodeCamp-Technical-Documentation/" target="_blank">
+                        <h4>See Project</h4>
+                        <i class="fi-rr-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="thanks">
+            <h1>Thank You For Visiting</h1>
+            <p>I’m already excited about the next time you visit! Thank you so much for coming into my web Portofolio. Your energy and worldview never cease to inspire me, and I’m so happy we found the time to see each other. Thank you for visiting!</p>
+        </div>
+        <div class="social-media">
+            <div class="icon">
+                <a href="https://www.instagram.com/mohd_hoiruttmim/" class="fa fa-instagram fa-2x"></a>
+            </div>
+            <div class="icon">
+                <a href="https://github.com/MohdHoiruttmim" class="fa fa-github fa-2x"></a>
+            </div>
         </div>
     </section>
     <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
     <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
