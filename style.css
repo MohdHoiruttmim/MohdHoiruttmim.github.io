@@ -220,12 +220,12 @@ h1 span::before{
 @keyframes textIn{
 	to{
 		color: rgba(255, 255, 255, 1);
-		background: var(--red);
+		background: var(--black);
 		transform: translateX(100%);
 	}
 	from{
 		color: rgba(255, 255, 255, 0);
-		background: var(--red);
+		background: var(--black);
 		transform: translateX(-100%);
 	}
 }
